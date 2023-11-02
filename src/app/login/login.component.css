@@ -1,0 +1,34 @@
+
+ .wrapper {
+    
+    text-align: center;
+    display: flex;
+    object-fit:cover;
+    background: url('C:\Users\sshil\Downloads\image.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-position: center;
+   
+}
+/* .wrapper h1{
+    color: rgb(225, 17, 17);
+    margin-left: 50rem;
+} */
+
+.formgroup {
+    text-align: center;
+    color:rgb(51, 29, 194);
+    font-size:larger;
+    margin-top:2rem;
+    margin-left: 40rem;
+    font-family:cursive;
+}
+
+.button
+{
+
+    margin-left: 40rem;
+    padding-top: 1rem;
+}

@@ -1,0 +1,69 @@
+<div class="wrapper">
+    <!-- <h1> Login here </h1> -->
+    <form [formGroup]="form" (ngSubmit)="submit()">
+ 
+        <div class="main">
+
+
+            <div class="formgroup">
+                <label for="name">Username :</label>
+                <input formControlName="name" id="name" type="text" class="form-control">
+                <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+                    <div *ngIf="f['name'].errors && f['name'].errors['minlength']"> Name should be 3 characters</div>
+
+                </div>
+            </div>
+
+            <div class="formgroup">
+                <label for="email">Email :</label>
+                <input formControlName="email" id="email" type="text" class="form-control">
+                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                    <div *ngIf="f['email'].errors && f['email'].errors['email']"> Please enter valid Email</div>
+
+                </div>
+            </div>
+
+            <div class="formgroup">
+                <label for="phoneno">Mobile No :</label>
+                <input formControlName="phoneno" id="phoneno" type="text" class="form-control">
+                <div *ngIf="f['phoneno'].touched && f['phoneno'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['phoneno'].errors && f['phoneno'].errors['required']">Mobile No is required.</div>
+
+
+                </div>
+            </div>
+
+            <div class="formgroup">
+                <label for="address">Address :</label>
+                <input formControlName="address" id="address" type="text" class="form-control">
+                <div *ngIf="f['address'].touched && f['address'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['address'].errors && f['address'].errors['required']">Address is required.</div>
+
+
+                </div>
+            </div>
+
+            <div class="formgroup">
+                <label for="state">State :</label>
+                <input formControlName="state" id="state" type="text" class="form-control">
+                <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['state'].errors && f['state'].errors['required']">State is required.</div>
+                </div>
+            </div>
+
+            <div class="formgroup">
+                <label for="country">Country :</label>
+                <input formControlName="country" id="country" type="text" class="form-control">
+                <div *ngIf="f['country'].touched && f['country'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['country'].errors && f['country'].errors['required']">Country is required.</div>
+                </div>
+            </div>
+
+            <div class="button">
+            <button class="btn btn-primary" [disabled]="form.invalid" type="submit"> Submit </button>
+            </div>
+        </div>
+    </form>
+</div>
